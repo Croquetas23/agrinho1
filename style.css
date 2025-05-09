@@ -7,38 +7,128 @@
     --text-color: #024959;
     --background-color: #F2E3D5;
     --button-hover: #012E40;
-    --font-body: "Chocolate Classical Sans", serif;
-    --font-titulo: "Rakkas", serif;
+    --font-body: 'Chocolate Classical Sans', serif;
+    --font-titulo: 'Rakkas', serif;
 }
 
-/* código omitido */
-/* código omitido */
-
-/* Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-body);
 }
 
-/* Corpo da página */
+/* Corpo e tipografia */
 body {
+    font-family: var(--font-body);
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Cabeçalhos com destaque */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titulo);
+    margin-bottom: 0.5rem;
 }
 
 h3 {
     margin-top: 25px;
 }
 
+/* Parágrafos */
 p {
     margin-top: 20px;
 }
 
+/* Imagens responsivas centralizadas */
 img {
-    max-width: 90%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-/* código omitido */
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--button-hover);
+}
+
+/* Botões customizados */
+button,
+.btn {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Containers e seções */
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+/* Estilização do cabeçalho e navegação */
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--background-color);
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--button-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Outras classes ou elementos específicos podem ser adicionados abaixo conforme necessário */
+/* Exemplo: Seção de destaques */
+.highlight {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1rem;
+}
